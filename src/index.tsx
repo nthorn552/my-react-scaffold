@@ -1,9 +1,6 @@
-import * as React from 'react';
-import { render } from 'react-dom';
+import * as React from "react";
+import { render } from "react-dom";
 
-import App from './App';
+import App from "./App";
 
-render(
-    React.createElement(App, {}),
-    document.getElementById('cauldron-app')
-);
+render(React.createElement(App, {}), document.getElementById("this-app"));
