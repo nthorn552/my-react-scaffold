@@ -1,7 +1,7 @@
 import * as React from "react";
 
-const AppContainer: React.SFC = ({ children }) => {
-  return <div>{children}</div>;
+const AppContainer: React.FunctionComponent = ({ children }) => {
+  return <div>Hello World{children}</div>;
 };
 
 export default AppContainer;
