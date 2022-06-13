@@ -1,22 +1,14 @@
-import * as React from "react";
-import { createStore } from "redux";
-import { Provider } from "react-redux";
-import { BrowserRouter as Router } from "react-router-dom";
-import { composeWithDevTools } from "@redux-devtools/extension";
+import * as React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AppContainer from './components/AppContainer';
 
-import rootReducer from "./reducers";
-
-import AppContainer from "./components/AppContainer";
-
-const store = createStore(rootReducer, composeWithDevTools());
-
-const App = () => {
+const App = (): JSX.Element => {
   return (
-    <Provider store={store}>
-      <Router>
-        <AppContainer />
-      </Router>
-    </Provider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<AppContainer />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
